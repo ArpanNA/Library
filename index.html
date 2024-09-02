@@ -4,11 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handjet:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <h1>LIBRARY</h1>
+
+    <!-- Button to toggle the form visibility -->
+    <button id="toggleFormButton">Add Book</button>
+
+    <!-- Book form, initially hidden -->
+    <div id="book-form" style="display: none;">
+        <h2>Add a new book</h2>
+        <form id="addBookForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="pages" placeholder="Pages" required>
+            <label for="read">Have you read it?</label>
+            <select id="read">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <div id="library">
+        <h2>Your Books</h2>
+        <div id="booksDisplay"></div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 

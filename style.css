@@ -1,0 +1,144 @@
+/* styles.css */
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  color: antiquewhite;
+}
+h2 {
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  color: antiquewhite;
+}
+
+#toggleFormButton {
+  display: block;
+  width: 100px;
+  margin: 20px auto;
+  padding: 10px;
+  color: rgb(15, 13, 13);
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggleFormButton:hover {
+  background-color: #0056b3;
+}
+
+#book-form,
+#library {
+  max-width: 500px;
+  margin: 0 auto;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Flex container for books */
+#booksDisplay {
+  display: flex;
+  flex-wrap: wrap; /* Allows the books to wrap to the next line if they exceed the width */
+  gap: 20px; /* Adds space between the books */
+  justify-content: center; /* Centers the books horizontally */
+  margin-top: 20px;
+}
+
+.book-card {
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  width: 200px; /* Fixed width for each book card */
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.696);
+  display: flex;
+  flex-direction: column; /* Allows content to be arranged vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text */
+  font-size: 1.3rem; /* Smaller font size for better spacing */
+}
+
+.book-card p {
+  margin: 5px 0; /* Adds some space between paragraphs */
+}
+
+/* Styles for read and not read statuses */
+.read {
+  color: green; /* Green color for books that are read */
+  font-weight: bold;
+}
+
+.not-read {
+  color: red; /* Red color for books that are not read */
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  background: #83a4d4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
